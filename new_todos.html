@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Add To Do Page</h1>
+
+
+    <div class="container d-flex justify-content-center">
+        <div class="card p-3">
+            <form>
+
+                <select class="form-select mb-3" id="userDropdown">
+
+                </select>
+         
+                <select class="form-select mb-3" id="categoryDropdown">
+
+                </select>
+               
+                <select class="form-select mb-3" id="priorityDropdown">
+                    <option class="selected">Select A Priority</option>
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                </select>
+                <label> Task Description</label>
+                <textarea class="col-12" id="taskDescription" cols="30" rows="10">
+
+              </textarea>
+
+                <input id='dateInput' class="col-12" type="text">
+
+                <button id="addBtn" class="btn btn-dark">Add</button>
+            </form>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="new_todos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
