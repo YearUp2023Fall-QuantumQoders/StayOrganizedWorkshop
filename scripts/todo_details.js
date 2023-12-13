@@ -10,13 +10,16 @@ const completedItemElement = document.getElementById("completedItem");
 const completeBtn = document.getElementById("completeBtn");
 
 window.onload = () =>{
-    completeBtn.onclick = () => changeCompletedToTrue;
+    completeBtn.onclick = changeCompletedToTrue;
+    displayTaskInfo();
+}
+
+const displayTaskInfo = () =>{
     const urlParams = new URLSearchParams(location.search);
     let id;
     
     if (urlParams.has("id") === true){
         id = urlParams.get("id")
-        console.log(id)
         fetch(`http://localhost:8083/api/todos/${id}`)
             .then(res => res.json())
             .then(singleToDo =>{
@@ -27,14 +30,19 @@ window.onload = () =>{
                 deadlineItemElement.textContent = `Deadline: ${singleToDo.deadline}`;
                 priorityItemElement.textContent = `Priority: ${singleToDo.priority}`;
                 completedItemElement.textContent = `Completed: ${singleToDo.completed}`;
+                if(singleToDo.completed){
+                    completeBtn.disabled = true;
+                }
             })
             .catch(error => console.error("Error fetching data:", error));
     }
+
 }
 
 const changeCompletedToTrue = () =>{
+
     const urlParams = new URLSearchParams(location.search);
-    let urlId = urlParams.get("todoid");
+    let urlId = urlParams.get("id");
     fetch(`http://localhost:8083/api/todos/${urlId}`, {
         method: 'PUT',
         headers: {
@@ -46,10 +54,9 @@ const changeCompletedToTrue = () =>{
     })
     .then( res => res.json())
     .then(data =>{
-        console.log(data);
-        completeBtn.disabled = true;
-
-
+        // console.log(data);
     })
     .catch(error => console.error("Error fetching data:", error));
+    completeBtn.disabled = true;
+    completedItemElement.textContent ="Completed: true";
 }
