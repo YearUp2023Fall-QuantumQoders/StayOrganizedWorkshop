@@ -14,6 +14,7 @@ function init (){
 
 initUserDropdown();
 initCategoryDropdown();
+addBtn.onsubmit=onAddBtnSubmit;
 }
 
 
@@ -73,4 +74,4 @@ function onAddBtnSubmit (e){
   });
   location.reload();
 }
-}
+
