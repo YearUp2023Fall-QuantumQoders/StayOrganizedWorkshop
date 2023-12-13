@@ -1,10 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
 
-
-
-
-
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Stay Organized</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true" href="#"> View Your List</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="new_todos.html">Add a Task</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="new_user.html">Add a User</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="todo_details.html">Details</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 <select id="idDropdown">
 </select>
 
-
+<div class="container" id="toDoContainer">
+<!--Format should be Task description and deadline, then a hyperlink 
+using the href = todo_details.html?id=-->
+<table>
+    <thead>
+        <tr>
+            <th colspan="4">List of ToDos</th>
+        </tr>
+    </thead>
+    <tbody id="toDoTableBody">
+        
+    </tbody>
+</table>
+</div>
 <script src="scripts/todos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
