@@ -6,6 +6,7 @@ const addBtn=document.getElementById('addBtn')
 const dateInput=document.getElementById('dateInput')
 const taskDescription=document.getElementById('taskDescription')
 
+
 window.onload=init 
 
 
@@ -13,7 +14,6 @@ function init (){
 
 initUserDropdown();
 initCategoryDropdown();
-addBtn.onsubmit = onAddBtnSubmit;
 }
 
 
@@ -44,6 +44,7 @@ function initCategoryDropdown(){
         categoryDropdown.appendChild(categoryOption);
     }
 })
+
 }
 
 function onAddBtnSubmit (e){
@@ -72,4 +73,4 @@ function onAddBtnSubmit (e){
   });
   location.reload();
 }
-
+}
